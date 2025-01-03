@@ -1,0 +1,22 @@
+﻿@{
+	ViewData["Title"] = "ورود";
+}
+<h2>ورود</h2>
+<form asp-action="Login" method="post">
+	<div class="form-group">
+		<label for="Username">نام کاربری</label>
+		<input type="text" class="form-control" id="Username" name="username" required />
+	</div> <div class="form-group">
+		<label for="Password">رمز عبور</label>
+		<input type="password" class="form-control" id="Password" name="password" required />
+	</div>
+	<button type="submit" class="btn btn-primary">ورود</button>
+</form>
+@* @if (ViewBag.ErrorMessage != null)
+{
+	<div class="alert alert-danger">@ViewBag.ErrorMessage </div>
+} *@
+@* @if (TempData["ErrorMessage"] != null)
+{
+	<div class="alert alert-danger">@TempData["ErrorMessage"] </div>
+} *@

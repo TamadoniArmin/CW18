@@ -1,0 +1,29 @@
+﻿@using App.Domain.Core.Bank.TransAction.Entities;
+@model List<TransAction>
+@{
+	ViewData["Title"] = "Transaction list";
+}
+<h2>Transaction list</h2>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>amount</th>
+			<th>Date</th>
+			<th>Status</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.TransactionId</td>
+				<td>@item.Amount</td>
+				<td>@item.DestinationCardNumber</td>
+				<td>@item.TransactionDate</td>
+				<td><p>Succesful</p></td>
+				<td><a class="btn btn-primary" asp-action="ReturnToIndex" asp-controller="TransAction">option page</a></td>
+			</tr>
+		}
+	</tbody>
+</table>

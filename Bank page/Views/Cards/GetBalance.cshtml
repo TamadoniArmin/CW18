@@ -1,0 +1,20 @@
+﻿@using App.Domain.Core.Bank.Cards.Entities;
+@model double
+@{
+	ViewData["Title"] = "Balance";
+}
+<h2>Balance</h2>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Card Number</th>
+			<th>Balance</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>@InmmemoryDB.CurrentCardNumber</td>
+			<td>@Model</td>
+		</tr>
+	</tbody>
+</table>

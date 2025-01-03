@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Bank_page</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\App.Domain.AppServices\App.Domain.AppServices.csproj" />
+    <ProjectReference Include="..\App.Domain.Core\App.Domain.Core.csproj" />
+    <ProjectReference Include="..\CW18\CW18.csproj" />
+  </ItemGroup>
+
+</Project>

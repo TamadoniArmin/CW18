@@ -1,0 +1,23 @@
+﻿@using App.Domain.Core.Bank.Cards.Entities;
+@model string
+@{
+	ViewData["Title"] = "Options";
+}
+<h2>Ations</h2>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Card number</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+			<tr>
+				<td>@Model</td>
+			    <td>
+				<a class="btn btn-primary" asp-action="GetTransactionDitail" asp-controller="TransAction">Transaction</a>
+				<a class="btn btn-primary" asp-action="ShowTransactionInList" asp-controller="TransAction">List of transactions</a>
+			    </td>
+			</tr>
+	</tbody>
+</table>

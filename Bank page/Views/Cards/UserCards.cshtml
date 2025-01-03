@@ -1,0 +1,25 @@
+﻿@using App.Domain.Core.Bank.Cards.Entities;
+@model List<Card>
+@{
+	ViewData["Title"] = "List of cards";
+}
+<h2>لیست کارت ها</h2>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Number</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.CardNumber</td>
+				<td><a class="btn btn-primary" asp-action="GetBalance" asp-controller="Cards" asp-route-cardNumber=@item.CardNumber>Balance</a></td>
+				<td><a class="btn btn-primary" asp-action="GoToTransactionPage" asp-controller="Cards" asp-route-CardNumber=@item.CardNumber>Transaction</a></td>
+				<td><a class="btn btn-warning" asp-action="ChangePassword" asp-controller="Cards" asp-route-Cardnumbre=@item.CardNumber>Change Password</a></td>
+			</tr>
+		}
+	</tbody>
+</table>
+<a class="btn btn-primary" asp-action="AddProduct" asp-controller="Product">Add more Products</a>

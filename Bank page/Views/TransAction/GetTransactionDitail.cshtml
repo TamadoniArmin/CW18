@@ -1,0 +1,19 @@
+﻿@{
+	ViewData["Title"] = "Transaction";
+}
+<h2>Transaction</h2>
+<form asp-action="GetTransactionDitail" method="post">
+	<div class="form-group">
+		<label for="DestinationCard">DestinationCard</label>
+		<input type="text" class="form-control" id="Username" name="DestinationCard" required />
+	</div>
+	<div class="form-group">
+		<label for="EnteredMoney">Balance</label>
+		<input type="text" class="form-control" id="Username" name="EnteredMoney" required />
+	</div>
+	<button type="submit" class="btn btn-primary">Continue</button>
+</form>
+@if (ViewBag.ErrorMessage != null)
+{
+	<div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+}

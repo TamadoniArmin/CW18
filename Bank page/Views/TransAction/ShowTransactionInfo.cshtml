@@ -1,0 +1,26 @@
+﻿@using App.Domain.Core.Bank.Cards.Entities;
+@model Card
+@{
+	ViewData["Title"] = "Transaction Ditail";
+}
+<h2>Transaction Ditail</h2>
+<table class="table">
+	<thead>
+		<tr>
+			<th>from</th>
+			<th>To</th>
+			<th>For</th>
+			<th>Amount</th>
+		</tr>
+	</thead>
+	<tbody>
+			<tr>
+				<td>@InmmemoryDB.CurrentCardNumber</td>
+				<td>@Model.CardNumber</td>
+			    <td>@Model.Holder.Name</td>
+				<td>@InmmemoryDB.TransactionMoney</td>
+			</tr>
+	</tbody>
+</table>
+<a class="btn btn-primary" asp-action="ConfirmInfo" asp-controller="TransAction">Continue</a>
+<a class="btn btn-primary" asp-action="ReturnToIndex" asp-controller="TransAction">Return</a>
